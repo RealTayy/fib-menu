@@ -1,6 +1,7 @@
-console.log('hi');
-// Initialize and Returns FibMenu Instance
-function fibMenu(target, options) {
+/*----------------------------------------\
+| Initialize and Returns FibMenu Instance |
+\----------------------------------------*/
+const fibMenu = (target, options) => {
 	// Check if target is jQuery object and return FibMenu Instance
 	try {
 		if (target instanceof jQuery) return new FibMenu(target[0], options);
@@ -20,11 +21,31 @@ function fibMenu(target, options) {
 /*-----------------\ 
 | HELPER FUNCTIONS |
 \-----------------*/
+// Creates Parent container of the fibMenu
+fibMenu.generateFibMenuParent = () => {
+	const fibParent = document.createElement('div');
+	let { style, classList } = fibParent;
+	classList.add('fibmenu');
+	style.display = 'grid';
+	style.width = '100%';
+	style.height = '100%';
+	style.gridTemplateRows = 'repeat(8, 1fr)';
+	style.gridTemplateColumns = 'repeat(8, 12.5vh) auto';
+	fibParent
+	return fibParent
+}
 
+// fibMenu.generateFibHamburger
+
+
+/*-----------------------\ 
+| FIBMENU CLASS FUNCTION |
+\-----------------------*/
 class FibMenu {
 	constructor(target, options = {}) {
 		// Properties
 		this.target = target
+		// DOM Properties
 
 		// Initialize
 		this.init();
@@ -34,27 +55,23 @@ class FibMenu {
 		// Spread properties into variables
 		const {
 			target
-		} = this
+		} = this;
 
-		// Create div.fibMenu
-		const fibDiv = document.createElement('div');
-		let { style, classList } = fibDiv;
-		classList.add('fibmenu');
-		style.display = 'grid';
-		style.width = '100%';
-		style.height = '100%';
-		style.gridTemplateRows = 'repeat(8, 1fr)';
-		style.gridTemplateColumns = 'repeat(8, 12.5vh) auto';
-		this.fibDiv = fibDiv
+		// Spread helper functions into variables
+		const {
+			generateFibMenuParent
+		} = fibMenu;
+
+		// Create and append div.fibMenu
+		const fibParent = this.fibParent = generateFibMenuParent();
+		target.appendChild(fibParent);
 
 		// Create div.fibmenu-hamburger
-		const hamburgerDiv = document.createElement('div');
-		{ style, classList } = hamburgerDiv;
+		const fibMenuHamburger = document.createElement('div');
+		const { style, classList } = fibMenuHamburger;
 		classList.add('fibmenu-hamburger');
 		style.width = '50%'
 		style.height = '50%'
 
-
-		target.appendChild(fibDiv);
 	}
 }
