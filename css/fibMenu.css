@@ -1,0 +1,167 @@
+.fibmenu {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 6.25vh) auto;
+}
+.fibmenu .fibmenu-menubtn {
+  position: relative;
+  grid-row-start: 16;
+  grid-row-end: 17;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: end;
+  width: 100%;
+  height: 100%;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 70px;
+  max-height: 70px;
+  background: black;
+  cursor: pointer;
+}
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-closed,
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-opened {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30%;
+  transition-duration: 300ms;
+  transition-property: padding;
+}
+.fibmenu .fibmenu-menubtn:hover .fibmenu-menubtn-closed, .fibmenu .fibmenu-menubtn:hover.fibmenu-menubtn-opened {
+  padding: 27.5%;
+}
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-opened {
+  transform: translateX(-100%);
+}
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-opened .fibmenu-x-one {
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-opened .fibmenu-x-two {
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: white;
+  transform: rotate(-45deg);
+}
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-closed .fibmenu-hamburger-top,
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-closed .fibmenu-hamburger-mid,
+.fibmenu .fibmenu-menubtn .fibmenu-menubtn-closed .fibmenu-hamburger-bot {
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+}
+.fibmenu .fibmenu-box-0 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #141414;
+  grid-row-start: 16;
+  grid-row-end: 17;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.fibmenu .fibmenu-box-1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #292929;
+  grid-row-start: 15;
+  grid-row-end: 16;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.fibmenu .fibmenu-box-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #3d3d3d;
+  grid-row-start: 15;
+  grid-row-end: 17;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.fibmenu .fibmenu-box-3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #525252;
+  grid-row-start: 13;
+  grid-row-end: 15;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.fibmenu .fibmenu-box-4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #666666;
+  grid-row-start: 15;
+  grid-row-end: 16;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.fibmenu .fibmenu-box-5 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #7a7a7a;
+  grid-row-start: 13;
+  grid-row-end: 17;
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+.fibmenu .fibmenu-box-6 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #8f8f8f;
+  grid-row-start: 9;
+  grid-row-end: 13;
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+.fibmenu .fibmenu-box-7 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #a3a3a3;
+  grid-row-start: 9;
+  grid-row-end: 17;
+  grid-column-start: 9;
+  grid-column-end: 17;
+}
+.fibmenu .fibmenu-box-8 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #b8b8b8;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 17;
+}
+.fibmenu .fibmenu-box-9 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #cccccc;
+  grid-row-start: 1;
+  grid-row-end: 17;
+  grid-column-start: 17;
+  grid-column-end: 18;
+}
+
+/*# sourceMappingURL=fibMenu.css.map */

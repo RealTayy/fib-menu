@@ -1,0 +1,78 @@
+@import './mixins/mixins';
+
+.fibmenu {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 6.25vh) auto;
+
+  .fibmenu-menubtn {
+    position: relative;
+    grid-row-start: 16;
+    grid-row-end: 17;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-self: end;
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 70px;
+    max-height: 70px;
+    background: black;
+    cursor: pointer;
+
+    .fibmenu-menubtn-closed,
+    .fibmenu-menubtn-opened {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 30%;
+      transition-duration: 300ms;
+      transition-property: padding;
+    }
+
+    &:hover .fibmenu-menubtn-closed,
+    &:hover.fibmenu-menubtn-opened {
+      padding: 27.5%;
+    }
+
+    .fibmenu-menubtn-opened {
+      transform: translateX(-100%);
+
+      @include fibmenu-x-(one, 45);
+      @include fibmenu-x-(two, -45);
+    }
+
+    .fibmenu-menubtn-closed {
+
+      .fibmenu-hamburger-top,
+      .fibmenu-hamburger-mid,
+      .fibmenu-hamburger-bot {
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+      }
+    }
+
+  }
+
+  @include fibmenu-box-(0, 1, 0, 1, 1, hsl(0, 0%, 8%));
+  @include fibmenu-box-(1, 0, 1, 2, 1, hsl(0, 0%, 16%));
+  @include fibmenu-box-(2, 2, 0, 2, 2, hsl(0, 0%, 24%));
+  @include fibmenu-box-(3, 0, 2, 4, 2, hsl(0, 0%, 32%));
+  @include fibmenu-box-(4, 0, 1, 2, 1, hsl(0, 0%, 40%));
+  @include fibmenu-box-(5, 4, 0, 4, 4, hsl(0, 0%, 48%));
+  @include fibmenu-box-(6, 0, 4, 8, 4, hsl(0, 0%, 56%));
+  @include fibmenu-box-(7, 8, 0, 8, 8, hsl(0, 0%, 64%));
+  @include fibmenu-box-(8, 0, 8, 16, 8, hsl(0, 0%, 72%));
+  @include fibmenu-box-(9, 16, 0, 1, 16, hsl(0, 0%, 80%));
+
+}
