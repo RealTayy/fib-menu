@@ -79,7 +79,7 @@ fibMenu.generateFibBox = (box) => {
 	// div.fibmenu-box-{x}
 	const fibBox = document.createElement('div');
 	const evenOdd = box % 2 === 0 ? 'even' : 'odd';
-	fibBox.classList.add(`fibmenu-box-${box}`, evenOdd);
+	fibBox.classList.add('fibmenu-box', `fibmenu-box-${box}`, evenOdd);
 	return fibBox;
 }
 /*_________________________
@@ -125,7 +125,7 @@ class FibMenu {
 
 		// Create and append boxes
 		let box = 0;
-		while (box < 10) {
+		while (box < 9) {
 			const fibBox = this.fibBoxes[box] = generateFibBox(box);
 			fibParent.appendChild(fibBox);
 			box++;

@@ -9,7 +9,8 @@
 }
 
 @mixin fibmenu-box-($name, $xPos, $yPos, $width, $height, $bg) {
-  .fibmenu-box-#{$name} {
+  &.fibmenu-box-#{$name} {
+		// opacity: 0;
     position: relative;
     width: 100%;
     height: 100%;
@@ -18,5 +19,6 @@
     grid-row-end: -(-17 + $yPos);
     grid-column-start: $xPos + 1;
     grid-column-end: ($xPos + 1) + $width;
+    z-index: 10-$name;
   }
 }

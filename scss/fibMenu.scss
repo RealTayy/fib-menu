@@ -22,6 +22,7 @@
     max-height: 70px;
     background: black;
     cursor: pointer;
+    z-index: 11;
 
     .fibmenu-menubtn-closed,
     .fibmenu-menubtn-opened {
@@ -64,15 +65,23 @@
 
   }
 
-  @include fibmenu-box-(0, 1, 0, 1, 1, hsl(0, 0%, 8%));
-  @include fibmenu-box-(1, 0, 1, 2, 1, hsl(0, 0%, 16%));
-  @include fibmenu-box-(2, 2, 0, 2, 2, hsl(0, 0%, 24%));
-  @include fibmenu-box-(3, 0, 2, 4, 2, hsl(0, 0%, 32%));
-  @include fibmenu-box-(4, 0, 1, 2, 1, hsl(0, 0%, 40%));
-  @include fibmenu-box-(5, 4, 0, 4, 4, hsl(0, 0%, 48%));
-  @include fibmenu-box-(6, 0, 4, 8, 4, hsl(0, 0%, 56%));
-  @include fibmenu-box-(7, 8, 0, 8, 8, hsl(0, 0%, 64%));
-  @include fibmenu-box-(8, 0, 8, 16, 8, hsl(0, 0%, 72%));
-  @include fibmenu-box-(9, 16, 0, 1, 16, hsl(0, 0%, 80%));
+  .fibmenu-box {
+    &.even {
+      // left: -100%;
+    }
 
+    &.odd {
+      // top: 100%;
+    }
+
+    @include fibmenu-box-(0, 1, 0, 1, 1, hsl(0, 0%, 8%));
+    @include fibmenu-box-(1, 0, 1, 2, 1, hsl(0, 0%, 16%));
+    @include fibmenu-box-(2, 2, 0, 2, 2, hsl(0, 0%, 24%));
+    @include fibmenu-box-(3, 0, 2, 4, 2, hsl(0, 0%, 32%));
+    @include fibmenu-box-(4, 4, 0, 4, 4, hsl(0, 0%, 48%));
+    @include fibmenu-box-(5, 0, 4, 8, 4, hsl(0, 0%, 56%));
+    @include fibmenu-box-(6, 8, 0, 8, 8, hsl(0, 0%, 64%));
+    @include fibmenu-box-(7, 0, 8, 16, 8, hsl(0, 0%, 72%));
+    @include fibmenu-box-(8, 16, 0, 1, 16, hsl(0, 0%, 80%));
+  }
 }

@@ -11,9 +11,59 @@ const fibMenubtn = document.getElementById('fibmenu-menubtn');
 // 	else e.target.classList.add('is-active');
 // }
 
-// anime({
-//   targets: fibMenubtn,
-//   translateX: 250,
-//   rotate: '1turn',
-//   duration: 800
-// });
+const timeline = anime.timeline({
+	easing: 'easeInCirc',
+	duration: 200
+})
+
+timeline
+	.add({
+		targets: '.fibmenu-box-8',
+		translateX: ['0%', '-100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-7',
+		translateY: ['0%', '100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-6',
+		translateX: ['0%', '-100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-5',
+		translateY: ['0%', '100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-4',
+		translateX: ['0%', '-100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-3',
+		translateY: ['0%', '100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-2',
+		translateX: ['0%', '-100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-1',
+		translateY: ['0%', '100%'],
+		opacity: 0
+	})
+	.add({
+		targets: '.fibmenu-box-0',
+		translateX: ['0%', '-100%'],
+		opacity: 0
+	})
+
+timeline.play({});
+timeline.finished.then(() => {
+	timeline.reverse();
+})

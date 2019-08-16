@@ -20,6 +20,7 @@
   max-height: 70px;
   background: black;
   cursor: pointer;
+  z-index: 11;
 }
 .fibmenu .fibmenu-menubtn .fibmenu-menubtn-closed,
 .fibmenu .fibmenu-menubtn .fibmenu-menubtn-opened {
@@ -63,7 +64,7 @@
   width: 100%;
   background-color: #fff;
 }
-.fibmenu .fibmenu-box-0 {
+.fibmenu .fibmenu-box.fibmenu-box-0 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -72,8 +73,9 @@
   grid-row-end: 17;
   grid-column-start: 2;
   grid-column-end: 3;
+  z-index: 10;
 }
-.fibmenu .fibmenu-box-1 {
+.fibmenu .fibmenu-box.fibmenu-box-1 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -82,8 +84,9 @@
   grid-row-end: 16;
   grid-column-start: 1;
   grid-column-end: 3;
+  z-index: 9;
 }
-.fibmenu .fibmenu-box-2 {
+.fibmenu .fibmenu-box.fibmenu-box-2 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -92,8 +95,9 @@
   grid-row-end: 17;
   grid-column-start: 3;
   grid-column-end: 5;
+  z-index: 8;
 }
-.fibmenu .fibmenu-box-3 {
+.fibmenu .fibmenu-box.fibmenu-box-3 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -102,18 +106,9 @@
   grid-row-end: 15;
   grid-column-start: 1;
   grid-column-end: 5;
+  z-index: 7;
 }
-.fibmenu .fibmenu-box-4 {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #666666;
-  grid-row-start: 15;
-  grid-row-end: 16;
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.fibmenu .fibmenu-box-5 {
+.fibmenu .fibmenu-box.fibmenu-box-4 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -122,8 +117,9 @@
   grid-row-end: 17;
   grid-column-start: 5;
   grid-column-end: 9;
+  z-index: 6;
 }
-.fibmenu .fibmenu-box-6 {
+.fibmenu .fibmenu-box.fibmenu-box-5 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -132,8 +128,9 @@
   grid-row-end: 13;
   grid-column-start: 1;
   grid-column-end: 9;
+  z-index: 5;
 }
-.fibmenu .fibmenu-box-7 {
+.fibmenu .fibmenu-box.fibmenu-box-6 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -142,8 +139,9 @@
   grid-row-end: 17;
   grid-column-start: 9;
   grid-column-end: 17;
+  z-index: 4;
 }
-.fibmenu .fibmenu-box-8 {
+.fibmenu .fibmenu-box.fibmenu-box-7 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -152,8 +150,9 @@
   grid-row-end: 9;
   grid-column-start: 1;
   grid-column-end: 17;
+  z-index: 3;
 }
-.fibmenu .fibmenu-box-9 {
+.fibmenu .fibmenu-box.fibmenu-box-8 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -162,6 +161,7 @@
   grid-row-end: 17;
   grid-column-start: 17;
   grid-column-end: 18;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=fibMenu.css.map */
